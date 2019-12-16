@@ -1,4 +1,6 @@
 package queries.insert;
 
-public class Insert {
+import queries.Queries;
+
+public class Insert implements Queries {
 }

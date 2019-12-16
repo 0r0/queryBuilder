@@ -1,4 +1,6 @@
 package queries.delete;
 
-public class Delete {
+import queries.Queries;
+
+public class Delete implements Queries {
 }
