@@ -1,10 +1,13 @@
 package queries.update;
 
-public class Update extends UpdateAbstract {
+import Makers.Where;
+import queries.Queries;
+
+public class Update extends UpdateAbstract implements Where {
 
 
-    @Override
-    public String setTable(String table) {
-        return null;
-    }
+//    @Override
+//    public String setTable(String table) {
+//        return null;
+//    }
 }
