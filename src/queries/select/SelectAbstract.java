@@ -14,19 +14,19 @@ public abstract class SelectAbstract extends MutualQueryInfo implements Queries 
 
 
     }
-    private static String selectStringParser(HashMap<String, String> H){
-        String myParser="";
-        for(String s:H.keySet())
-            myParser+=s+"."+H.get(s)+",";
+    private static String selectStringParser(HashMap<String, String> selectedField){
+        StringBuilder myParser= new StringBuilder();
+        for(String s:selectedField.keySet())
+            myParser.append(s).append(".").append(selectedField.get(s)).append(",");
         return myParser.substring(0,myParser.length()-1);
 
             }
 
-    private static String joinStringParser(ArrayList<String> A){
-        String myParser="";
-        for(String s:A)
-            myParser+=s+" ";
-        return  myParser;
+    private static String joinStringParser(ArrayList<String> joins){
+        StringBuilder myParser= new StringBuilder();
+        for(String s:joins)
+            myParser.append(s).append("\n");
+        return myParser.toString();
 
     }
 
