@@ -1,6 +1,6 @@
 package queries.select.join;
 
-import org.jetbrains.annotations.Contract;
+
 
 public abstract class JoinConstant{
 
