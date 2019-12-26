@@ -1,5 +1,9 @@
 package queries.select;
 
-public class Select extends SelectAbstract {
+import Makers.Where;
+import queries.Queries;
+
+public class Select extends SelectAbstract implements Where{
+
 
 }

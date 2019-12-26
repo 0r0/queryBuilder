@@ -1,6 +1,7 @@
 package queries.insert;
 
-import queries.Queries;
+import Makers.Where;
 
-public class Insert implements Queries {
+
+public class Insert extends InsertAbstract implements Where {
 }
