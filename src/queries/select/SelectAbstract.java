@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class SelectAbstract extends MutualQueryInfo implements Queries {
-    public String selectQuery(String firstTable, HashMap<String,String> selectedTableField, ArrayList<String> joins,String condition){
+    public static String selectQuery(String firstTable, HashMap<String,String> selectedTableField, ArrayList<String> joins,String condition){
 
         return "select "+selectStringParser(selectedTableField)+" "+" from "+firstTable+" "+joinStringParser(joins)+" "+condition;
 
 
 
     }
-    private String selectStringParser(HashMap<String,String> H){
+    private static String selectStringParser(HashMap<String, String> H){
         String myParser="";
         for(String s:H.keySet())
             myParser+=s+"."+H.get(s)+",";
@@ -22,7 +22,7 @@ public abstract class SelectAbstract extends MutualQueryInfo implements Queries 
 
             }
 
-    private String joinStringParser(ArrayList<String> A){
+    private static String joinStringParser(ArrayList<String> A){
         String myParser="";
         for(String s:A)
             myParser+=s+" ";
