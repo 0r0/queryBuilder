@@ -10,11 +10,20 @@ public abstract class SelectAbstract extends MutualQueryInfo implements Queries 
     public static String selectQuery(String firstTable, HashMap<String,String> selectedTableField, ArrayList<String> joins,String condition){
 
         return "select "+selectStringParser(selectedTableField)+" "+" from "+firstTable+" "+joinStringParser(joins)+" "+condition;
-
-
-
     }
-    private static String selectStringParser(HashMap<String, String> selectedField){
+
+    public static String selectQuery(String firstTable,HashMap<String,String> selectedTableField,ArrayList<String> joins){
+        return "select "+selectStringParser(selectedTableField)+" from "+firstTable+joinStringParser(joins)+" ";
+    }
+
+
+    public static String selectQuery(String firstTable,HashMap<String,String> selectedTableField){
+        return "select "+selectStringParser(selectedTableField)+" from "+firstTable;
+    }
+
+
+
+    private static String selectStringParser(HashMap<String,String> selectedField){ //put all
         StringBuilder myParser= new StringBuilder();
         for(String s:selectedField.keySet())
             myParser.append(s).append(".").append(selectedField.get(s)).append(",");
